@@ -1,0 +1,107 @@
+{
+  "validCustomers": [
+    {
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "email": "juan.perez@test.com",
+      "phone": "+591 765 432 10",
+      "address": {
+        "street": "Av. Heroínas 123",
+        "city": "Cochabamba",
+        "zone": "Norte",
+        "reference": "Cerca del mercado"
+      }
+    },
+    {
+      "firstName": "María",
+      "lastName": "González",
+      "email": "maria.gonzalez@test.com",
+      "phone": "+591 712 345 678",
+      "address": {
+        "street": "Calle Sucre 456",
+        "city": "Cochabamba",
+        "zone": "Sur",
+        "reference": "Frente a la plaza"
+      }
+    },
+    {
+      "firstName": "Carlos",
+      "lastName": "Rodríguez",
+      "email": "carlos.rodriguez@test.com",
+      "phone": "+591 723 456 789",
+      "address": {
+        "street": "Av. América 789",
+        "city": "Cochabamba",
+        "zone": "Centro",
+        "reference": "Al lado del banco"
+      }
+    }
+  ],
+  "invalidCustomers": [
+    {
+      "firstName": "",
+      "lastName": "Test",
+      "email": "invalid@test.com",
+      "phone": "+591 700 000 000",
+      "expectedError": "El nombre es requerido"
+    },
+    {
+      "firstName": "Test",
+      "lastName": "",
+      "email": "invalid@test.com",
+      "phone": "+591 700 000 000",
+      "expectedError": "El apellido es requerido"
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "invalid-email",
+      "phone": "+591 700 000 000",
+      "expectedError": "Email inválido"
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@test.com",
+      "phone": "123",
+      "expectedError": "Teléfono inválido"
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User",
+      "email": "test@test.com",
+      "phone": "+591 700 000 000",
+      "address": {
+        "street": "",
+        "city": "Cochabamba",
+        "zone": "Centro"
+      },
+      "expectedError": "La dirección es requerida"
+    }
+  ],
+  "paymentMethods": [
+    {
+      "method": "Efectivo",
+      "requiresChange": true
+    },
+    {
+      "method": "Tarjeta de Crédito",
+      "requiresCardDetails": true
+    },
+    {
+      "method": "Tarjeta de Débito",
+      "requiresCardDetails": true
+    },
+    {
+      "method": "QR",
+      "requiresQRScan": true
+    }
+  ],
+  "deliveryTimes": [
+    "Lo antes posible",
+    "30 minutos",
+    "1 hora",
+    "2 horas",
+    "Programar para más tarde"
+  ]
+}

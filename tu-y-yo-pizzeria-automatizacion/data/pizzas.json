@@ -1,0 +1,83 @@
+{
+  "pizzasTradicionales": [
+    {
+      "name": "VEGETARIANA",
+      "description": "Pimentón, maíz, cebolla, tomate, champiñones, salsa de tomate y mozzarella",
+      "price": "Bs. 115.00",
+      "category": "tradicionales"
+    },
+    {
+      "name": "GRECA",
+      "description": "Carne, pollo, cebolla, tomate fresco, salsa de tomate y mozzarella",
+      "price": "Bs. 115.00",
+      "category": "tradicionales"
+    },
+    {
+      "name": "ALFONSINA",
+      "description": "Piña, champiñones, tocino, aceitunas, ajo, salsa de tomate y mozzarella",
+      "price": "Bs. 115.00",
+      "category": "tradicionales"
+    },
+    {
+      "name": "PRIMAVERA",
+      "description": "Chorizo español, pimentón, maíz, salsa de tomate y mozzarella",
+      "price": "Bs. 115.00",
+      "category": "tradicionales"
+    }
+  ],
+  "pizzasEspeciales": [
+    {
+      "name": "HAWAIANA",
+      "description": "Jamón, piña y mozzarella",
+      "price": "Bs. 125.00",
+      "category": "especiales"
+    },
+    {
+      "name": "PEPPERONI",
+      "description": "Pepperoni y mozzarella",
+      "price": "Bs. 125.00",
+      "category": "especiales"
+    },
+    {
+      "name": "CUATRO QUESOS",
+      "description": "Mozzarella, parmesano, gorgonzola y queso de cabra",
+      "price": "Bs. 135.00",
+      "category": "especiales"
+    }
+  ],
+  "testScenarios": [
+    {
+      "scenario": "Agregar pizza única al carrito",
+      "pizzas": ["VEGETARIANA"],
+      "expectedTotal": 115.00
+    },
+    {
+      "scenario": "Agregar múltiples pizzas al carrito",
+      "pizzas": ["VEGETARIANA", "GRECA", "PRIMAVERA"],
+      "expectedTotal": 345.00
+    },
+    {
+      "scenario": "Agregar pizza especial al carrito",
+      "pizzas": ["HAWAIANA"],
+      "expectedTotal": 125.00
+    },
+    {
+      "scenario": "Mezclar pizzas tradicionales y especiales",
+      "pizzas": ["VEGETARIANA", "PEPPERONI"],
+      "expectedTotal": 240.00
+    }
+  ],
+  "invalidSearchTerms": [
+    "xyzabc123",
+    "!@#$%^&*",
+    "producto_inexistente",
+    "12345678901234567890"
+  ],
+  "validSearchTerms": [
+    "pizza",
+    "vegetariana",
+    "pollo",
+    "queso",
+    "pepperoni"
+  ]
+}
